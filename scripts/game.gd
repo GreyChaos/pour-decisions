@@ -23,21 +23,24 @@ func _process(delta: float) -> void:
 		
 func update_time():
 	if GameManager.current_time >= 18:
-		GameManager.day_active = false
-		$Clock/TimeSpeed.stop()
-		$"Day End".visible = true
-		$"Day End/Happy".text = str(GameManager.happy_customers_today)
-		$"Day End/Total".text = str(GameManager.happy_customers_today + GameManager.upset_customers_today)
-		GameManager.happy_customers_today = 0
-		$"Day End/Upset".text = str(GameManager.upset_customers_today)
-		GameManager.upset_customers_today = 0
-		
-		$"Day End/Income".text = str(GameManager.total_money_today)
-		GameManager.total_money_today = 0
-		$"Day End/Day".text = str(GameManager.current_day)
+		end_day()
 		return
 	GameManager.current_time += 1
 	$Clock.text = str(GameManager.current_time) + ":00"
+	
+func end_day():
+	GameManager.day_active = false
+	$Clock/TimeSpeed.stop()
+	$"Day End".visible = true
+	$"Day End/Happy".text = str(GameManager.happy_customers_today)
+	$"Day End/Total".text = str(GameManager.happy_customers_today + GameManager.upset_customers_today)
+	GameManager.happy_customers_today = 0
+	$"Day End/Upset".text = str(GameManager.upset_customers_today)
+	GameManager.upset_customers_today = 0
+	
+	$"Day End/Income".text = str(GameManager.total_money_today)
+	GameManager.total_money_today = 0
+	$"Day End/Day".text = str(GameManager.current_day)
 
 func _on_pour_rate_timeout() -> void:
 	if GameManager.held_item == null:
@@ -64,15 +67,7 @@ func refill_potions():
 		$Bottles/Bottle2.fill_potion()
 		$Bottles/Bottle3.fill_potion()
 		$Bottles/Bottle5.fill_potion()
-
-
-func _enlarge_recipe_sheet() -> void:
-	if GameManager.held_item == null:
-		$"Recipe Sheet".scale = Vector2(2.5,2.5)
-		$"Recipe Sheet".z_index = 10
-func _shrink_recipe_sheet() -> void:
-	$"Recipe Sheet".scale = Vector2(1,1)
-	$"Recipe Sheet".z_index = 1
+		$Bottles/Bottle6.fill_potion()
 
 
 func _start_next_day() -> void:
@@ -119,3 +114,20 @@ func _on_buy_yellow_pressed() -> void:
 		$Money.text = "$" + str(GameManager.money)
 		$Bottles/Bottle5.visible = true
 		$"Day End/Buy Yellow".queue_free()
+
+
+func _skip_day() -> void:
+	end_day()
+
+
+func _on_buy_purple_pressed() -> void:
+	if GameManager.money >= 100:
+		$"Recipe Sheet2".visible = true
+		GameManager.money -= 100
+		GameManager.all_recipes.append(preload("res://potions/love_potion.tres"))
+		GameManager.all_recipes.append(preload("res://potions/sleep_potion.tres"))
+		GameManager.all_recipes.append(preload("res://potions/death_potion.tres"))
+		GameManager.all_recipes.append(preload("res://potions/anger_potion.tres"))
+		$Money.text = "$" + str(GameManager.money)
+		$Bottles/Bottle6.visible = true
+		$"Day End/Buy Purple".queue_free()

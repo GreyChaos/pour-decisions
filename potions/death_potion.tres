@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="PotionRecipe" format=3 uid="uid://diwc5ujl6ydj8"]
+
+[ext_resource type="Script" uid="uid://bq01oolp8ppxl" path="res://scripts/ingredient_amount.gd" id="1_a37af"]
+[ext_resource type="Script" uid="uid://bncof2ny5vmo7" path="res://scripts/potion_recipe.gd" id="2_8plqi"]
+
+[sub_resource type="Resource" id="Resource_hh1oa"]
+script = ExtResource("1_a37af")
+type = 5
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[sub_resource type="Resource" id="Resource_5v8hn"]
+script = ExtResource("1_a37af")
+amount = 2
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[resource]
+script = ExtResource("2_8plqi")
+potion_name = "Anger Potion"
+ingredients = Array[ExtResource("1_a37af")]([SubResource("Resource_hh1oa"), SubResource("Resource_5v8hn")])
+sell_price = 25
+symptoms = Array[String](["I need a permanent solution", "They've lived long enough", "Something untracable, if you catch my drift", "My inheritance is taking too long", "Make it look natural"])
+metadata/_custom_type_script = "uid://bncof2ny5vmo7"

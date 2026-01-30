@@ -54,6 +54,6 @@ func add_contents(content: GameManager.PotionType):
 		
 func changeSprite(amount: int):
 	filledAmount += amount
-	if filledAmount > 4:
-		filledAmount = 4
+	if filledAmount > 8:
+		filledAmount = 8
 	animated_sprite_2d.frame = filledAmount

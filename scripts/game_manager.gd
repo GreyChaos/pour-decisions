@@ -1,6 +1,6 @@
 extends Node
 
-enum PotionType { RED, BLUE, GREEN, EMPTY, YELLOW}
+enum PotionType { RED, BLUE, GREEN, EMPTY, YELLOW, PURPLE}
 var held_item = null
 var pouring = false
 var current_customer = null

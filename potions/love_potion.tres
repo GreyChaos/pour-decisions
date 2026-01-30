@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="PotionRecipe" format=3 uid="uid://c7less6oqx6xd"]
+
+[ext_resource type="Script" uid="uid://bq01oolp8ppxl" path="res://scripts/ingredient_amount.gd" id="1_jqylc"]
+[ext_resource type="Script" uid="uid://bncof2ny5vmo7" path="res://scripts/potion_recipe.gd" id="2_vkorj"]
+
+[sub_resource type="Resource" id="Resource_hh1oa"]
+script = ExtResource("1_jqylc")
+type = 5
+amount = 2
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[sub_resource type="Resource" id="Resource_5v8hn"]
+script = ExtResource("1_jqylc")
+type = 4
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[resource]
+script = ExtResource("2_vkorj")
+potion_name = "Anger Potion"
+ingredients = Array[ExtResource("1_jqylc")]([SubResource("Resource_hh1oa"), SubResource("Resource_5v8hn")])
+sell_price = 25
+symptoms = Array[String](["They don't know they love me yet", "I need somebody to notice me, no matter what", "We're meant to be, they just need convinced", "Make them forget about her, and just see me", "They rejected me, they shouldn't have"])
+metadata/_custom_type_script = "uid://bncof2ny5vmo7"

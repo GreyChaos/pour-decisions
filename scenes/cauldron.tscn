@@ -23,6 +23,18 @@ region = Rect2(384, 0, 128, 128)
 atlas = ExtResource("1_bi80w")
 region = Rect2(512, 0, 128, 128)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7j16"]
+atlas = ExtResource("1_bi80w")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yblu"]
+atlas = ExtResource("1_bi80w")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgj33"]
+atlas = ExtResource("1_bi80w")
+region = Rect2(896, 0, 128, 128)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_o7j16"]
 animations = [{
 "frames": [{
@@ -40,6 +52,15 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_re3ld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7j16")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yblu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgj33")
 }],
 "loop": false,
 "name": &"default",

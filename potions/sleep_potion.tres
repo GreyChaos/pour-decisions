@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="PotionRecipe" format=3 uid="uid://dwlc1fap0jmbl"]
+
+[ext_resource type="Script" uid="uid://bq01oolp8ppxl" path="res://scripts/ingredient_amount.gd" id="1_r8tqf"]
+[ext_resource type="Script" uid="uid://bncof2ny5vmo7" path="res://scripts/potion_recipe.gd" id="2_u78u4"]
+
+[sub_resource type="Resource" id="Resource_hh1oa"]
+script = ExtResource("1_r8tqf")
+type = 5
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[sub_resource type="Resource" id="Resource_5v8hn"]
+script = ExtResource("1_r8tqf")
+type = 4
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[resource]
+script = ExtResource("2_u78u4")
+potion_name = "Sleep Potion"
+ingredients = Array[ExtResource("1_r8tqf")]([SubResource("Resource_hh1oa"), SubResource("Resource_5v8hn")])
+sell_price = 25
+symptoms = Array[String](["Help me sleep", "I just need them to be quiet for a bit", "I need them old cold, no questions", "My neighbors too loud at night", "My kids stay up too late"])
+metadata/_custom_type_script = "uid://bncof2ny5vmo7"

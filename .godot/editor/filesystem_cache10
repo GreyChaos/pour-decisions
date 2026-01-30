@@ -1,12 +1,13 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1769797846
+::res://::1769805594
 default_bus_layout.tres::AudioBusLayout::3853635028555893581::1769794948::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1769797585::0::1::::<><><>0<>0<><>::
-::res://assets/::1769803092
+::res://assets/::1769805329
+2nd recipeSheet.png::CompressedTexture2D::1211012362961860078::1769805327::1769805329::1::::<><><>0<>0<>5cddd1370f276f79040bdc8a94c118ae<>res://.godot/imported/2nd recipeSheet.png-d15afaa732bb69e47ff54fbfaf1e645a.ctex::
 arrow.png::CompressedTexture2D::844675227207556417::1769796218::1769796226::1::::<><><>0<>0<>3f47f6dd9ab1179c4bef669b639aea22<>res://.godot/imported/arrow.png-af9c40b335090227900bc7e5c1ee343c.ctex::
-background.png::CompressedTexture2D::4337915786519465848::1769803092::1769803094::1::::<><><>0<>0<>a80087bf7c79b87e665edd26034a3b8a<>res://.godot/imported/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.ctex::
-bottle.png::CompressedTexture2D::5940245579167293582::1769719603::1769719604::1::::<><><>0<>0<>357b9074a4d034ef65a5e5002f7921a8<>res://.godot/imported/bottle.png-c6516d24eccaf665f8dd12a5ae313f7e.ctex::
-cauldron.png::CompressedTexture2D::8969650814255216686::1769719725::1769719735::1::::<><><>0<>0<>98c338725a8f7fb78d5a81a648e1d2b7<>res://.godot/imported/cauldron.png-c19e57c44accdaef2cb751d843a6ad41.ctex::
+background.png::CompressedTexture2D::4337915786519465848::1769804971::1769804972::1::::<><><>0<>0<>a80087bf7c79b87e665edd26034a3b8a<>res://.godot/imported/background.png-1fdba8b6a966ce2c2ffc607f7c096e95.ctex::
+bottle.png::CompressedTexture2D::5940245579167293582::1769803699::1769803700::1::::<><><>0<>0<>357b9074a4d034ef65a5e5002f7921a8<>res://.godot/imported/bottle.png-c6516d24eccaf665f8dd12a5ae313f7e.ctex::
+cauldron.png::CompressedTexture2D::8969650814255216686::1769804576::1769804577::1::::<><><>0<>0<>98c338725a8f7fb78d5a81a648e1d2b7<>res://.godot/imported/cauldron.png-c19e57c44accdaef2cb751d843a6ad41.ctex::
 customer.png::CompressedTexture2D::2441424907924248177::1769742183::1769742186::1::::<><><>0<>0<>5a464b193b78bb95fc3f6626c0fba346<>res://.godot/imported/customer.png-70f28c485cbada77aa2d328871a914e5.ctex::
 dayend.png::CompressedTexture2D::6303502832430294322::1769784498::1769784501::1::::<><><>0<>0<>768d45eac3a5737900c76e29d886219b<>res://.godot/imported/dayend.png-145eb3c90c443b7bea098231b1f5fa65.ctex::
 Main Menu.png::CompressedTexture2D::4269628903459554081::1769795856::1769795856::1::::<><><>0<>0<>73b906b30caa842e14d3dbf80a448e5f<>res://.godot/imported/Main Menu.png-46eb19b0ff258702102cdbebdf1acb5b.ctex::
@@ -26,20 +27,21 @@ clarity_potion.tres::Resource/PotionRecipe::1945923514323094388::1769802171::0::
 courage_potion.tres::Resource/PotionRecipe::4130461515491797644::1769802171::0::1::::<><><>0<>0<><>::uid://bq01oolp8ppxl::::res://scripts/ingredient_amount.gd<>uid://bncof2ny5vmo7::::res://scripts/potion_recipe.gd
 energy_potion.tres::Resource/PotionRecipe::4465373978665436897::1769801404::0::1::::<><><>0<>0<><>::uid://bq01oolp8ppxl::::res://scripts/ingredient_amount.gd<>uid://bncof2ny5vmo7::::res://scripts/potion_recipe.gd
 health_potion.tres::Resource/PotionRecipe::3217646844720152841::1769801404::0::1::::<><><>0<>0<><>::uid://bncof2ny5vmo7::::res://scripts/potion_recipe.gd<>uid://bq01oolp8ppxl::::res://scripts/ingredient_amount.gd
-::res://scenes/::1769802427
+::res://scenes/::1769805563
 bottle.tscn::PackedScene::7767007889942469633::1769794947::0::1::::<><><>0<>0<><>::uid://cqvq8hgp5hqn3::::res://assets/bottle.png<>uid://oiwn7ewcddke::::res://scripts/bottle.gd<>uid://cbb2y7vku31wk::::res://assets/audio/Pouring.wav<>uid://b5ywsy5jxq8qh::::res://assets/audio/Fill Bottle.wav
-cauldron.tscn::PackedScene::1228207329535775809::1769740826::0::1::::<><><>0<>0<><>::uid://bholgguiykn1k::::res://scripts/cauldron.gd<>uid://d0173rhub1551::::res://assets/cauldron.png
+cauldron.tscn::PackedScene::1228207329535775809::1769804618::0::1::::<><><>0<>0<><>::uid://bholgguiykn1k::::res://scripts/cauldron.gd<>uid://d0173rhub1551::::res://assets/cauldron.png
 customer.tscn::PackedScene::750542255535163195::1769801029::0::1::::<><><>0<>0<><>::uid://ba1v580bse8j2::::res://assets/customer.png<>uid://cvewotqr7p74w::::res://scripts/customer.gd<>uid://csxgg0e07wxye::::res://assets/audio/Happy Customer.wav<>uid://c8ypxkjswq6cn::::res://assets/audio/Upset Customer.wav<>uid://b542hcwu5nqrm::::res://assets/patience.png
-game.tscn::PackedScene::1094036005301684282::1769802427::0::1::::<><><>0<>0<><>::uid://tkj5dmongjvi::::res://scripts/game.gd<>uid://b22k3se7wasvg::::res://assets/background.png<>uid://diwnqq4isrmdd::::res://scenes/bottle.tscn<>uid://rq7no64beqdl::::res://scenes/cauldron.tscn<>uid://kxtk6odq1xi6::::res://scenes/customer.tscn<>uid://oymwcmd5yspo::::res://assets/recipeSheet.png<>uid://cv2p1g6p6t2mg::::res://assets/dayend.png<>uid://d1hrymwkbb0a6::::res://scenes/potion_bag.tscn<>uid://cfu2k0g56r18i::::res://assets/audio/Pippin the Hunchback.mp3
+game.tscn::PackedScene::1094036005301684282::1769805563::0::1::::<><><>0<>0<><>::uid://tkj5dmongjvi::::res://scripts/game.gd<>uid://b22k3se7wasvg::::res://assets/background.png<>uid://diwnqq4isrmdd::::res://scenes/bottle.tscn<>uid://rq7no64beqdl::::res://scenes/cauldron.tscn<>uid://kxtk6odq1xi6::::res://scenes/customer.tscn<>uid://oymwcmd5yspo::::res://assets/recipeSheet.png<>uid://cgfyw6x8mxrll::::res://scripts/recipe_sheet.gd<>uid://cv2p1g6p6t2mg::::res://assets/dayend.png<>uid://rivgxmty66p3::::res://assets/2nd recipeSheet.png<>uid://d1hrymwkbb0a6::::res://scenes/potion_bag.tscn<>uid://cfu2k0g56r18i::::res://assets/audio/Pippin the Hunchback.mp3
 main_menu.tscn::PackedScene::5441710592631027022::1769796887::0::1::::<><><>0<>0<><>::uid://bmo1w1ypo2hyj::::res://scripts/main_menu.gd<>uid://b13ift4jajya0::::res://assets/Main Menu.png<>uid://cfu2k0g56r18i::::res://assets/audio/Pippin the Hunchback.mp3<>uid://mbfxbj0ihs4h::::res://assets/arrow.png<>uid://xx04kodmg54w::::res://assets/audio/Click.wav
 potion_bag.tscn::PackedScene::8999698342598968667::1769794287::0::1::::<><><>0<>0<><>::uid://cmxsltclxj0::::res://scripts/potion_bag.gd<>uid://8kijyq44hi4o::::res://assets/potion_bag.png<>uid://cytxxk8n33jj8::::res://assets/audio/Opening Bag.wav
-::res://scripts/::1769802427
+::res://scripts/::1769805563
 bottle.gd::GDScript::1000519510055353436::1769800737::0::1::::Bottle<>Node2D<><>0<>0<><>::
-cauldron.gd::GDScript::2907322825832178690::1769738514::0::1::::<>Node2D<><>0<>0<><>::
+cauldron.gd::GDScript::2907322825832178690::1769804618::0::1::::<>Node2D<><>0<>0<><>::
 customer.gd::GDScript::6256426393232967944::1769800810::0::1::::<>Node2D<><>0<>0<><>::
-game.gd::GDScript::1354832010176676790::1769802427::0::1::::<>Node2D<><>0<>0<><>::
-game_manager.gd::GDScript::2584303091220612364::1769802308::0::1::::<>Node<><>0<>0<><>::
+game.gd::GDScript::1354832010176676790::1769805427::0::1::::<>Node2D<><>0<>0<><>::
+game_manager.gd::GDScript::2584303091220612364::1769805563::0::1::::<>Node<><>0<>0<><>::
 ingredient_amount.gd::GDScript::3562656021725698941::1769728467::0::1::::IngredientAmount<>Resource<><>0<>0<><>::
 main_menu.gd::GDScript::3259207428567882221::1769796853::0::1::::<>Node2D<><>0<>0<><>::
 potion_bag.gd::GDScript::4899395960685887::1769794250::0::1::::<>Node2D<><>0<>0<><>::
 potion_recipe.gd::GDScript::3303864812708187892::1769728476::0::1::::PotionRecipe<>Resource<><>0<>0<><>::
+recipe_sheet.gd::GDScript::5205794478547683229::1769805482::0::1::::<>Node2D<><>0<>0<><>::
