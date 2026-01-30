@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cvewotqr7p74w" path="res://scripts/customer.gd" id="1_xss0h"]
 [ext_resource type="AudioStream" uid="uid://csxgg0e07wxye" path="res://assets/audio/Happy Customer.wav" id="3_rjbu2"]
 [ext_resource type="AudioStream" uid="uid://c8ypxkjswq6cn" path="res://assets/audio/Upset Customer.wav" id="4_qqxhk"]
+[ext_resource type="Texture2D" uid="uid://b542hcwu5nqrm" path="res://assets/patience.png" id="5_qqxhk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xss0h"]
 atlas = ExtResource("1_ktfjk")
@@ -109,3 +110,17 @@ bus = &"Effects"
 [node name="Upset Sound" type="AudioStreamPlayer2D" parent="." unique_id=1200460577]
 stream = ExtResource("4_qqxhk")
 bus = &"Effects"
+
+[node name="Patience" type="Timer" parent="." unique_id=140146820]
+wait_time = 10.0
+autostart = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=603268600]
+offset_left = 171.0
+offset_top = -161.0
+offset_right = 221.0
+offset_bottom = -111.0
+fill_mode = 5
+texture_progress = ExtResource("5_qqxhk")
+
+[connection signal="timeout" from="Patience" to="." method="_on_patience_timeout"]

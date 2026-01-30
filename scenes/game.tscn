@@ -67,15 +67,6 @@ shape = SubResource("RectangleShape2D_p57ef")
 [node name="Customer" parent="." unique_id=1308236668 instance=ExtResource("5_iywne")]
 position = Vector2(-681, -125)
 
-[node name="HappySad" type="Label" parent="." unique_id=1886973943]
-offset_left = -440.0
-offset_top = -396.0
-offset_right = -305.0
-offset_bottom = -295.0
-theme_override_colors/font_color = Color(0.047058824, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-text = "Happy/Sad"
-
 [node name="Money" type="Label" parent="." unique_id=1718579348]
 offset_left = 792.0
 offset_top = -395.0

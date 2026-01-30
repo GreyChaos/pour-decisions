@@ -66,14 +66,12 @@ func _unhandled_input(event):
 			# Give to customer
 			if area_2d.get_overlapping_areas():
 				if potion == GameManager.current_customer.potion_wanted:
-					$"../../HappySad".text = "Good job!"
 					GameManager.current_customer.play_sound(true)
 					GameManager.happy_customers_today += 1
 					GameManager.money += GameManager.current_customer.potion_wanted.sell_price
 					GameManager.total_money_today += GameManager.current_customer.potion_wanted.sell_price
 					$"../../Money".text = "$" + str(GameManager.money)
 				else:
-					$"../../HappySad".text = "BAD!"
 					GameManager.current_customer.play_sound(false)
 					GameManager.upset_customers_today += 1
 				GameManager.current_customer.new_customer()

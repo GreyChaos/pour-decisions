@@ -102,6 +102,7 @@ func _on_buy_refills_pressed() -> void:
 func _buy_2nd_potion_bag() -> void:
 	if GameManager.money >= 25:
 		GameManager.money -= 25
+		$Money.text = "$" + str(GameManager.money)
 		$"Potion Bag2".visible = true
 		$"Day End/Buy Refills2".queue_free()
 

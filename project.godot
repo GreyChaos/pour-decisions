@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pour Decisions"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="uid://cjsagciq0nfra"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/show_image=false
 
