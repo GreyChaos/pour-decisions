@@ -1,0 +1,16 @@
+res://scenes/game.tscn
+res://potions/health_potion.tres
+res://potions/energy_potion.tres
+res://potions/courage_potion.tres
+res://potions/clarity_potion.tres
+res://scripts/potion_bag.gd
+res://scenes/potion_bag.tscn
+res://scripts/game.gd
+res://scripts/game_manager.gd
+res://default_bus_layout.tres
+res://scenes/bottle.tscn
+res://scripts/bottle.gd
+res://scenes/customer.tscn
+res://scripts/customer.gd
+res://scripts/main_menu.gd
+res://scenes/main_menu.tscn

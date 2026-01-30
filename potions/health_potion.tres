@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="PotionRecipe" format=3 uid="uid://bl3wf5qoxk5xd"]
+
+[ext_resource type="Script" uid="uid://bncof2ny5vmo7" path="res://scripts/potion_recipe.gd" id="1_3jb5j"]
+[ext_resource type="Script" uid="uid://bq01oolp8ppxl" path="res://scripts/ingredient_amount.gd" id="1_3t2ah"]
+
+[sub_resource type="Resource" id="Resource_aqnhl"]
+script = ExtResource("1_3t2ah")
+amount = 2
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[sub_resource type="Resource" id="Resource_pkmif"]
+script = ExtResource("1_3t2ah")
+type = 1
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[resource]
+script = ExtResource("1_3jb5j")
+potion_name = "Health Potion"
+ingredients = Array[ExtResource("1_3t2ah")]([SubResource("Resource_aqnhl"), SubResource("Resource_pkmif")])
+sell_price = 5
+symptoms = Array[String](["I am in pain", "My leg hurts", "Oof Ouchie", "My back hurts", "I can't feel my foot!"])
+metadata/_custom_type_script = "uid://bncof2ny5vmo7"

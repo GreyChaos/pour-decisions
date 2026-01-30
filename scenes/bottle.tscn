@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://diwnqq4isrmdd"]
+
+[ext_resource type="Texture2D" uid="uid://cqvq8hgp5hqn3" path="res://assets/bottle.png" id="1_724mw"]
+[ext_resource type="Script" uid="uid://oiwn7ewcddke" path="res://scripts/bottle.gd" id="1_qr18b"]
+[ext_resource type="AudioStream" uid="uid://cbb2y7vku31wk" path="res://assets/audio/Pouring.wav" id="3_emwc0"]
+[ext_resource type="AudioStream" uid="uid://b5ywsy5jxq8qh" path="res://assets/audio/Fill Bottle.wav" id="4_137t8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr18b"]
+atlas = ExtResource("1_724mw")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emwc0"]
+atlas = ExtResource("1_724mw")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_137t8"]
+atlas = ExtResource("1_724mw")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2db8"]
+atlas = ExtResource("1_724mw")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxwgf"]
+atlas = ExtResource("1_724mw")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gns2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr18b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emwc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_137t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2db8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxwgf")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qr18b"]
+size = Vector2(191, 206)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qr18b"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(20.41, 1, 1)
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 98, 0)
+scale_min = 6.0
+scale_max = 6.0
+
+[node name="Bottle" type="Node2D" unique_id=771791634]
+z_index = 2
+script = ExtResource("1_qr18b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1956298010]
+scale = Vector2(1.75, 1.75)
+sprite_frames = SubResource("SpriteFrames_gns2f")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1966476105]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=80497914]
+position = Vector2(-9.5, 8)
+shape = SubResource("RectangleShape2D_qr18b")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1117105712]
+position = Vector2(53, -68)
+rotation = -1.035697
+emitting = false
+amount = 39
+lifetime = 2.0
+randomness = 0.6
+collision_base_size = 0.0
+process_material = SubResource("ParticleProcessMaterial_qr18b")
+
+[node name="PouringSound" type="AudioStreamPlayer2D" parent="." unique_id=1093348987]
+stream = ExtResource("3_emwc0")
+bus = &"Effects"
+
+[node name="Fill Sound" type="AudioStreamPlayer2D" parent="." unique_id=603032854]
+stream = ExtResource("4_137t8")
+bus = &"Effects"
+
+[connection signal="input_event" from="Area2D" to="." method="_mouse_entered"]

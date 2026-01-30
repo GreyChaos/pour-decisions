@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cfu2k0g56r18i"
+path="res://.godot/imported/Pippin the Hunchback.mp3-8042e309910bfade0f7afa56222b9dfc.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Pippin the Hunchback.mp3"
+dest_files=["res://.godot/imported/Pippin the Hunchback.mp3-8042e309910bfade0f7afa56222b9dfc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

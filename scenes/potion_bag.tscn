@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d1hrymwkbb0a6"]
+
+[ext_resource type="Script" uid="uid://cmxsltclxj0" path="res://scripts/potion_bag.gd" id="1_0pm7o"]
+[ext_resource type="Texture2D" uid="uid://8kijyq44hi4o" path="res://assets/potion_bag.png" id="2_gmi81"]
+[ext_resource type="AudioStream" uid="uid://cytxxk8n33jj8" path="res://assets/audio/Opening Bag.wav" id="3_gmi81"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fus2"]
+atlas = ExtResource("2_gmi81")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgtmc"]
+atlas = ExtResource("2_gmi81")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_polyt"]
+atlas = ExtResource("2_gmi81")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k3q5f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fus2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgtmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_polyt")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Potion Bag" type="Node2D" unique_id=1186918009]
+script = ExtResource("1_0pm7o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1089991120]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_k3q5f")
+
+[node name="Button" type="Button" parent="." unique_id=1669722824]
+offset_left = -121.0
+offset_top = -100.0
+offset_right = -10.0
+offset_bottom = 14.0
+scale = Vector2(2, 2)
+flat = true
+
+[node name="Bag Used" type="AudioStreamPlayer2D" parent="." unique_id=705432947]
+stream = ExtResource("3_gmi81")
+volume_db = 16.736
+pitch_scale = 0.61
+bus = &"Effects"
+
+[connection signal="pressed" from="Button" to="." method="_on_bag_clicked"]

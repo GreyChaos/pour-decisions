@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://cjsagciq0nfra"]
+
+[ext_resource type="Script" uid="uid://bmo1w1ypo2hyj" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://b13ift4jajya0" path="res://assets/Main Menu.png" id="2_wu84c"]
+[ext_resource type="AudioStream" uid="uid://cfu2k0g56r18i" path="res://assets/audio/Pippin the Hunchback.mp3" id="3_8ln24"]
+[ext_resource type="Texture2D" uid="uid://mbfxbj0ihs4h" path="res://assets/arrow.png" id="4_wu84c"]
+[ext_resource type="AudioStream" uid="uid://xx04kodmg54w" path="res://assets/audio/Click.wav" id="5_8ln24"]
+
+[node name="Main Menu" type="Node2D" unique_id=744466808]
+script = ExtResource("1_bqqt6")
+
+[node name="MainMenu" type="Sprite2D" parent="." unique_id=688511302]
+texture = ExtResource("2_wu84c")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1393335069]
+
+[node name="Start" type="Button" parent="." unique_id=139163576]
+offset_left = -113.0
+offset_top = -160.0
+offset_right = 87.0
+offset_bottom = -106.0
+flat = true
+
+[node name="Options" type="Button" parent="." unique_id=1604296418]
+offset_left = -133.0
+offset_top = -66.0
+offset_right = 115.0
+offset_bottom = -5.0
+flat = true
+
+[node name="Credits" type="Button" parent="." unique_id=1879682555]
+offset_left = -136.0
+offset_top = 34.0
+offset_right = 112.0
+offset_bottom = 95.0
+flat = true
+
+[node name="Exit" type="Button" parent="." unique_id=1219060546]
+offset_left = -82.0
+offset_top = 262.0
+offset_right = 67.0
+offset_bottom = 319.0
+flat = true
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=689127805]
+stream = ExtResource("3_8ln24")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=26716280]
+visible = false
+position = Vector2(361, 267)
+texture = ExtResource("4_wu84c")
+
+[node name="Click" type="AudioStreamPlayer2D" parent="." unique_id=228985298]
+stream = ExtResource("5_8ln24")
+
+[node name="Options Menu" type="Node2D" parent="." unique_id=1120109946]
+visible = false
+
+[node name="MusicHSlider" type="HSlider" parent="Options Menu" unique_id=1608827034]
+offset_left = 146.0
+offset_top = -29.0
+offset_right = 516.0
+offset_bottom = -8.0
+max_value = 1.0
+step = 0.1
+value = 0.4
+
+[node name="Label" type="Label" parent="Options Menu" unique_id=1798135337]
+offset_left = 147.0
+offset_top = -52.0
+offset_right = 256.0
+offset_bottom = -29.0
+text = "Music Volume"
+
+[node name="EffectHSlider" type="HSlider" parent="Options Menu" unique_id=1277170505]
+offset_left = 147.0
+offset_top = 14.0
+offset_right = 517.0
+offset_bottom = 35.0
+max_value = 1.0
+step = 0.1
+value = 0.8
+
+[node name="Label2" type="Label" parent="Options Menu" unique_id=1102081109]
+offset_left = 148.0
+offset_top = -9.0
+offset_right = 257.0
+offset_bottom = 14.0
+text = "Effect Volume"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="Options Menu/MusicHSlider" to="." method="_on_music_h_slider_value_changed"]
+[connection signal="value_changed" from="Options Menu/EffectHSlider" to="." method="_on_effect_h_slider_value_changed"]

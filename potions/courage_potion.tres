@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="PotionRecipe" format=3 uid="uid://by33dk6xtf06s"]
+
+[ext_resource type="Script" uid="uid://bq01oolp8ppxl" path="res://scripts/ingredient_amount.gd" id="1_dns2m"]
+[ext_resource type="Script" uid="uid://bncof2ny5vmo7" path="res://scripts/potion_recipe.gd" id="2_lswoj"]
+
+[sub_resource type="Resource" id="Resource_hh1oa"]
+script = ExtResource("1_dns2m")
+amount = 2
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[sub_resource type="Resource" id="Resource_5v8hn"]
+script = ExtResource("1_dns2m")
+type = 4
+metadata/_custom_type_script = "uid://bq01oolp8ppxl"
+
+[resource]
+script = ExtResource("2_lswoj")
+potion_name = "Courage Potion"
+ingredients = Array[ExtResource("1_dns2m")]([SubResource("Resource_hh1oa"), SubResource("Resource_5v8hn")])
+sell_price = 10
+symptoms = Array[String](["I have to give a speech tomorrow and I'm terrified", "There's something in my basement and I can't face it", "I need to stand up to my boss", "Got a big battle ahead of me", "I'm scared of everything lately"])
+metadata/_custom_type_script = "uid://bncof2ny5vmo7"

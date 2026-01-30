@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://kxtk6odq1xi6"]
+
+[ext_resource type="Texture2D" uid="uid://ba1v580bse8j2" path="res://assets/customer.png" id="1_ktfjk"]
+[ext_resource type="Script" uid="uid://cvewotqr7p74w" path="res://scripts/customer.gd" id="1_xss0h"]
+[ext_resource type="AudioStream" uid="uid://csxgg0e07wxye" path="res://assets/audio/Happy Customer.wav" id="3_rjbu2"]
+[ext_resource type="AudioStream" uid="uid://c8ypxkjswq6cn" path="res://assets/audio/Upset Customer.wav" id="4_qqxhk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xss0h"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qg4y"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjbu2"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqxhk"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_846g6"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qj8gj"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2wat"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk6lr"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm32s"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2aad"]
+atlas = ExtResource("1_ktfjk")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qj8gj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xss0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qg4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjbu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqxhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_846g6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qj8gj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2wat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk6lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm32s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2aad")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Customer" type="Node2D" unique_id=1308236668]
+script = ExtResource("1_xss0h")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=325387721]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_qj8gj")
+
+[node name="Label" type="Label" parent="." unique_id=1293074287]
+offset_left = -221.0
+offset_top = -262.0
+offset_right = 228.0
+offset_bottom = -163.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "ITEM PLEASE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Happy Sound" type="AudioStreamPlayer2D" parent="." unique_id=1822099740]
+stream = ExtResource("3_rjbu2")
+bus = &"Effects"
+
+[node name="Upset Sound" type="AudioStreamPlayer2D" parent="." unique_id=1200460577]
+stream = ExtResource("4_qqxhk")
+bus = &"Effects"

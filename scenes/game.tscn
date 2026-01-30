@@ -1,0 +1,220 @@
+[gd_scene format=3 uid="uid://pt7u325xc7us"]
+
+[ext_resource type="Script" uid="uid://tkj5dmongjvi" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://b22k3se7wasvg" path="res://assets/background.png" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://diwnqq4isrmdd" path="res://scenes/bottle.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://rq7no64beqdl" path="res://scenes/cauldron.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://kxtk6odq1xi6" path="res://scenes/customer.tscn" id="5_iywne"]
+[ext_resource type="Texture2D" uid="uid://oymwcmd5yspo" path="res://assets/recipeSheet.png" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://cv2p1g6p6t2mg" path="res://assets/dayend.png" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://d1hrymwkbb0a6" path="res://scenes/potion_bag.tscn" id="8_gee14"]
+[ext_resource type="AudioStream" uid="uid://cfu2k0g56r18i" path="res://assets/audio/Pippin the Hunchback.mp3" id="9_0tnpc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p57ef"]
+size = Vector2(459, 435)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
+size = Vector2(296, 197)
+
+[node name="Game" type="Node2D" unique_id=1125354537]
+script = ExtResource("1_lbhrr")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1185178970]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=965146262]
+texture = ExtResource("1_uwrxv")
+
+[node name="Bottles" type="Node" parent="." unique_id=437858071]
+
+[node name="Bottle" parent="Bottles" unique_id=771791634 instance=ExtResource("2_yqjtg")]
+position = Vector2(-776, 429)
+color = Color(1, 0, 0, 1)
+potion_type = 0
+
+[node name="Bottle2" parent="Bottles" unique_id=823394951 instance=ExtResource("2_yqjtg")]
+position = Vector2(-569, 429)
+color = Color(0, 0, 1, 1)
+potion_type = 1
+
+[node name="Bottle3" parent="Bottles" unique_id=1351163271 instance=ExtResource("2_yqjtg")]
+position = Vector2(-368, 429)
+color = Color(0, 0.99607843, 0, 1)
+potion_type = 2
+
+[node name="Bottle5" parent="Bottles" unique_id=1674666453 instance=ExtResource("2_yqjtg")]
+position = Vector2(-167, 429)
+color = Color(1, 0.9058309, 0, 1)
+potion_type = 4
+
+[node name="Bottle4" parent="Bottles" unique_id=129247421 instance=ExtResource("2_yqjtg")]
+position = Vector2(777, 428)
+amount = 0
+
+[node name="Cauldron" parent="." unique_id=1174418797 instance=ExtResource("3_lnu2h")]
+position = Vector2(-37, 108)
+
+[node name="PourRate" type="Timer" parent="." unique_id=446385386]
+wait_time = 0.4
+
+[node name="Customer Dropoff" type="Area2D" parent="." unique_id=1045407285]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Customer Dropoff" unique_id=2001222229]
+position = Vector2(-673.5, -183.5)
+shape = SubResource("RectangleShape2D_p57ef")
+
+[node name="Customer" parent="." unique_id=1308236668 instance=ExtResource("5_iywne")]
+position = Vector2(-681, -125)
+
+[node name="HappySad" type="Label" parent="." unique_id=1886973943]
+offset_left = -440.0
+offset_top = -396.0
+offset_right = -305.0
+offset_bottom = -295.0
+theme_override_colors/font_color = Color(0.047058824, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Happy/Sad"
+
+[node name="Money" type="Label" parent="." unique_id=1718579348]
+offset_left = 792.0
+offset_top = -395.0
+offset_right = 867.0
+offset_bottom = -332.0
+theme_override_colors/font_color = Color(0.047058824, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "$0"
+
+[node name="Recipe Sheet" type="Node2D" parent="." unique_id=1161129292]
+position = Vector2(741, 155)
+
+[node name="Sprite" type="Sprite2D" parent="Recipe Sheet" unique_id=608969451]
+position = Vector2(-65, 1)
+texture = ExtResource("6_p57ef")
+
+[node name="Area2D" type="Area2D" parent="Recipe Sheet" unique_id=567082420]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recipe Sheet/Area2D" unique_id=1201532520]
+position = Vector2(-63, 0.5)
+shape = SubResource("RectangleShape2D_iywne")
+
+[node name="Clock" type="Label" parent="." unique_id=2105561777]
+offset_left = 677.0
+offset_top = -489.0
+offset_right = 868.0
+offset_bottom = -400.0
+theme_override_font_sizes/font_size = 64
+text = "8:00"
+horizontal_alignment = 1
+
+[node name="TimeSpeed" type="Timer" parent="Clock" unique_id=2032543953]
+wait_time = 6.0
+autostart = true
+
+[node name="Potion Bag" parent="." unique_id=1186918009 instance=ExtResource("8_gee14")]
+position = Vector2(-749, 140)
+
+[node name="Potion Bag2" parent="." unique_id=142554344 instance=ExtResource("8_gee14")]
+visible = false
+position = Vector2(-514, 140)
+
+[node name="Day End" type="Node2D" parent="." unique_id=542551466]
+visible = false
+z_index = 10
+
+[node name="Sprite" type="Sprite2D" parent="Day End" unique_id=713399526]
+position = Vector2(-27, 13)
+texture = ExtResource("7_u5sy4")
+
+[node name="Happy" type="Label" parent="Day End" unique_id=1258778376]
+offset_left = -277.0
+offset_top = -233.0
+offset_right = -57.0
+offset_bottom = -145.0
+theme_override_colors/font_color = Color(0, 0.6807044, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "223244"
+
+[node name="Income" type="Label" parent="Day End" unique_id=431049979]
+offset_left = -350.0
+offset_top = 4.0
+offset_right = -130.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0, 0.6807044, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "223244"
+
+[node name="Upset" type="Label" parent="Day End" unique_id=1968769202]
+offset_left = -284.0
+offset_top = -156.0
+offset_right = -64.0
+offset_bottom = -68.0
+theme_override_colors/font_color = Color(0.8729805, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "223244"
+
+[node name="Total" type="Label" parent="Day End" unique_id=114596845]
+offset_left = -324.0
+offset_top = -76.0
+offset_right = -104.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "223244"
+
+[node name="Day" type="Label" parent="Day End" unique_id=890320425]
+offset_left = 575.0
+offset_top = -420.0
+offset_right = 770.0
+offset_bottom = -332.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "22324"
+
+[node name="Next Day" type="Button" parent="Day End" unique_id=1978939681]
+offset_left = 284.0
+offset_top = 262.0
+offset_right = 676.0
+offset_bottom = 419.0
+flat = true
+
+[node name="Buy Refills" type="Button" parent="Day End" unique_id=1317918864]
+offset_left = -763.0
+offset_top = 110.0
+offset_right = -404.0
+offset_bottom = 208.0
+theme_override_font_sizes/font_size = 32
+text = "Refill Potion Bags
+($10)"
+
+[node name="Buy Refills2" type="Button" parent="Day End" unique_id=1242819967]
+offset_left = -398.0
+offset_top = 108.0
+offset_right = -39.0
+offset_bottom = 206.0
+theme_override_font_sizes/font_size = 32
+text = "Buy 2nd Potion Bag
+($25)"
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1335203379]
+stream = ExtResource("9_0tnpc")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[node name="Menu Buttom" type="Button" parent="." unique_id=1377243525]
+offset_left = -957.0
+offset_top = -537.0
+offset_right = -850.0
+offset_bottom = -506.0
+text = "exit to menu
+"
+
+[connection signal="timeout" from="PourRate" to="." method="_on_pour_rate_timeout"]
+[connection signal="mouse_entered" from="Recipe Sheet/Area2D" to="." method="_enlarge_recipe_sheet"]
+[connection signal="mouse_exited" from="Recipe Sheet/Area2D" to="." method="_shrink_recipe_sheet"]
+[connection signal="timeout" from="Clock/TimeSpeed" to="." method="_on_time_speed_timeout"]
+[connection signal="pressed" from="Day End/Next Day" to="." method="_start_next_day"]
+[connection signal="pressed" from="Day End/Buy Refills" to="." method="_on_buy_refills_pressed"]
+[connection signal="pressed" from="Day End/Buy Refills2" to="." method="_buy_2nd_potion_bag"]
+[connection signal="pressed" from="Menu Buttom" to="." method="_return_to_menu"]
