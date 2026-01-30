@@ -104,8 +104,18 @@ func _buy_2nd_potion_bag() -> void:
 		GameManager.money -= 25
 		$Money.text = "$" + str(GameManager.money)
 		$"Potion Bag2".visible = true
-		$"Day End/Buy Refills2".queue_free()
+		$"Day End/Buy Potion Bag".queue_free()
 
 
 func _return_to_menu() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _on_buy_yellow_pressed() -> void:
+	if GameManager.money >= 35:
+		GameManager.money -= 35
+		GameManager.all_recipes.append(preload("res://potions/courage_potion.tres"))
+		GameManager.all_recipes.append(preload("res://potions/clarity_potion.tres"))
+		$Money.text = "$" + str(GameManager.money)
+		$Bottles/Bottle5.visible = true
+		$"Day End/Buy Yellow".queue_free()

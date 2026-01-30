@@ -18,6 +18,6 @@ metadata/_custom_type_script = "uid://bq01oolp8ppxl"
 script = ExtResource("2_toibl")
 potion_name = "Clarity Potion"
 ingredients = Array[ExtResource("1_51tyj")]([SubResource("Resource_hh1oa"), SubResource("Resource_5v8hn")])
-sell_price = 10
+sell_price = 15
 symptoms = Array[String](["My head's all foggy, can't think straight", "I've got an exam and nothing's sticking", "Need to solve a difficult problem", "Keep forgetting what I was doing", "My thoughts are all over the place"])
 metadata/_custom_type_script = "uid://bncof2ny5vmo7"

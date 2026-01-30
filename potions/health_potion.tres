@@ -17,6 +17,6 @@ metadata/_custom_type_script = "uid://bq01oolp8ppxl"
 script = ExtResource("1_3jb5j")
 potion_name = "Health Potion"
 ingredients = Array[ExtResource("1_3t2ah")]([SubResource("Resource_aqnhl"), SubResource("Resource_pkmif")])
-sell_price = 5
+sell_price = 10
 symptoms = Array[String](["I am in pain", "My leg hurts", "Oof Ouchie", "My back hurts", "I can't feel my foot!"])
 metadata/_custom_type_script = "uid://bncof2ny5vmo7"

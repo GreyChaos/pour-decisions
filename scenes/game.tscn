@@ -42,6 +42,7 @@ color = Color(0, 0.99607843, 0, 1)
 potion_type = 2
 
 [node name="Bottle5" parent="Bottles" unique_id=1674666453 instance=ExtResource("2_yqjtg")]
+visible = false
 position = Vector2(-167, 429)
 color = Color(1, 0.9058309, 0, 1)
 potion_type = 4
@@ -178,7 +179,7 @@ theme_override_font_sizes/font_size = 32
 text = "Refill Potion Bags
 ($10)"
 
-[node name="Buy Refills2" type="Button" parent="Day End" unique_id=1242819967]
+[node name="Buy Potion Bag" type="Button" parent="Day End" unique_id=1242819967]
 offset_left = -398.0
 offset_top = 108.0
 offset_right = -39.0
@@ -186,6 +187,15 @@ offset_bottom = 206.0
 theme_override_font_sizes/font_size = 32
 text = "Buy 2nd Potion Bag
 ($25)"
+
+[node name="Buy Yellow" type="Button" parent="Day End" unique_id=1584705990]
+offset_left = -760.0
+offset_top = 218.0
+offset_right = -401.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 32
+text = "Buy Yellow Potion
+($35)"
 
 [node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=1335203379]
 stream = ExtResource("9_0tnpc")
@@ -207,5 +217,6 @@ text = "exit to menu
 [connection signal="timeout" from="Clock/TimeSpeed" to="." method="_on_time_speed_timeout"]
 [connection signal="pressed" from="Day End/Next Day" to="." method="_start_next_day"]
 [connection signal="pressed" from="Day End/Buy Refills" to="." method="_on_buy_refills_pressed"]
-[connection signal="pressed" from="Day End/Buy Refills2" to="." method="_buy_2nd_potion_bag"]
+[connection signal="pressed" from="Day End/Buy Potion Bag" to="." method="_buy_2nd_potion_bag"]
+[connection signal="pressed" from="Day End/Buy Yellow" to="." method="_on_buy_yellow_pressed"]
 [connection signal="pressed" from="Menu Buttom" to="." method="_return_to_menu"]

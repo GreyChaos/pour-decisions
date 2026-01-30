@@ -14,9 +14,7 @@ var day_active = true
 
 var all_recipes: Array[PotionRecipe] = [
 	preload("res://potions/health_potion.tres"),
-	preload("res://potions/energy_potion.tres"),
-	preload("res://potions/courage_potion.tres"),
-	preload("res://potions/clarity_potion.tres")
+	preload("res://potions/energy_potion.tres")
 ]
 
 # Called when the node enters the scene tree for the first time.
